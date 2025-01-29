@@ -26,6 +26,43 @@ Machine learning is a field of study, think of it as a process, and models are s
 Deep learning is a type of Machine learning that uses artificial nueral networks. 
 ![image](https://github.com/user-attachments/assets/364f8c64-2cce-4091-ac4d-5afcdff7cd30)
 
+## Artifical Neural Networks
+are inspired by human brains. Made up of interconnected nodes called nuerons. Learn to process data and makes predictions. Deep learning has more layers of nuerons that allows them to predict better that traditional ML models. Neural networks can be both labelled and unlabelled data. This is called semi-supervised learning. insupervised learning a Neural n/w is trained on a small labelled data and allowed to generalise from a large unlabelled data. 
+
+## Gen-AI 
+is a type of Deep Learning which uses these artifical neural networks and can also process labelled as well as unlabelled data. to generate new content. 
+
+## Large Language Models
+is a type of deep learning models 
+![image](https://github.com/user-attachments/assets/9f965dab-f78d-4917-9766-4d635e11b211)
+
+To understand lets move one step up  
+
+
+  ^
+  |
+LLMs
+  ^
+  |
+Deep Learning 
+
+Based on the output machine learning models can be divided into 2 types: Generative & Discriminative 
+
+### Discriminative Model 
+is used to classify or predict labels or Data points. e.g if a mail is SPAM or NOT SPAM here spam is the lable and mauil is the data point.
+Discriminative models are typically trained on a dataset of these labelled data points. while learing the model is given labelled SAPM or NOT SPAM.
+e.g Blood Reports to to a particular dicease or not.
+
+### Generative Model
+is used to designed to understand and reproduce the charistrics of data rather than distingushing between differrent categories or labels. 
+if a model is trained on cat images then the model learns Shapes, Colors, patters, textures common to cat. it understand these features to create new images of cat that looks realistic but do not recreate any specific cat from training data. 
+LLMs are a specific type of Generative models Focussing on the Language and GPT is a example of LLM.
+
+
+
+
+
+
 
 
 
