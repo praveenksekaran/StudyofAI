@@ -1,7 +1,7 @@
 # Control Net
-Basics : https://getimg.ai/guides/guide-to-controlnet
-Advance: https://www.runcomfy.com/tutorials/mastering-controlnet-in-comfyui
-Examples: https://comfyanonymous.github.io/ComfyUI_examples/controlnet/
+1. [Basics](https://getimg.ai/guides/guide-to-controlnet)
+2. [Advance](https://www.runcomfy.com/tutorials/mastering-controlnet-in-comfyui)
+3. [Examples](https://comfyanonymous.github.io/ComfyUI_examples/controlnet/)
 
 #### What is ControlNet?
 ControlNet allows you to use your own pictures as a reference for the AI when creating new images. Think of it as giving the AI a visual blueprint in addition to your written instructions (the text prompt). It doesn't replace the main Text to Image model you select in the AI Generator; instead, they work in tandem.
@@ -35,6 +35,17 @@ Additional models will first extract the desired pose from your source image. Co
 ![instandID_Models](https://github.com/user-attachments/assets/0ca44c2f-d006-4e31-833f-62294ae464b5)
 
 - use "apply InstandtID" with tag "InstantID"
+
+#### Controlnet + IP adapter 
+![CN+IPA](https://github.com/user-attachments/assets/e35b85e0-37db-4115-b485-af89e8cad5a6)
+
+Outputs
+![ComfyUI_Controlnet IPadapter_workflow2](https://github.com/user-attachments/assets/2397a2eb-bb34-4638-8306-8f92d588c0ce)
+
+#### INpainting 
+- inpating does not require controlnet or IP adapter
+- - Inpainting can add prompt into an image or remove part of the image or replace (using instandID or IP Adapter)
+  - 
   
 
 
