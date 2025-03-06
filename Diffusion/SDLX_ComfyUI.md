@@ -44,8 +44,21 @@ Outputs
 
 #### INpainting 
 - inpating does not require controlnet or IP adapter
-- - Inpainting can add prompt into an image or remove part of the image or replace (using instandID or IP Adapter)
-  - 
+- - Inpainting can add prompt into an image
+  - remove part of the image or replace (using instandID or IP Adapter)
+  ![removeInpainting](https://github.com/user-attachments/assets/d9c483f9-7ce5-4153-8bd8-0f7fc9463883)
+
+#### Virtual Trial 
+
+![Virtual Trial](https://github.com/user-attachments/assets/9351d64f-f6a7-414d-87b7-64e63b79ca15)
+
+#### Civit AI
+
+- Install Civitai Comfy Nodes from Custom nodes on ComfyUI Manager. Restart & refresh browser
+- Load "CivitAI Checkpoint Loader"
+- get API ket from civitai.com settings
+- get RealvisXL inpainting model [RealVisXL](https://civitai.com/models/139562?modelVersionId=297320)
+- Use it as Checkpoint Loader 
   
 
 
