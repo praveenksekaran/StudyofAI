@@ -58,7 +58,19 @@ Outputs
 - Load "CivitAI Checkpoint Loader"
 - get API ket from civitai.com settings
 - get RealvisXL inpainting model [RealVisXL](https://civitai.com/models/139562?modelVersionId=297320)
-- Use it as Checkpoint Loader 
+- Use it as Checkpoint Loader
+
+#### GroundingDino
+- Manager --> Custom Node --> groundingDino --> Install --> Restart 
+- Add Node called Grounding Dino SAMSegment (segment anything)
+- add GroundigDinoModelLoader(segment anything) --> GroundingDINO_SwinB(938MB)
+- add SAMModelLoader(segment anything) -->sam_vit_h(2.56GB)
+
+![ComfyUI_GroundingDino_Controlnet_2](https://github.com/user-attachments/assets/5215f5d1-12be-4b00-bd71-39ab1c92ab9c)
+
+
+#### IC-Lighting
+- 
   
 
 
