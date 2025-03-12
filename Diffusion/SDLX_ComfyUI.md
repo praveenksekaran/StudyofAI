@@ -70,7 +70,10 @@ Outputs
 
 
 #### IC-Lighting
-- 
+https://github.com/kijai/ComfyUI-IC-Light
+https://github.com/lllyasviel/IC-Light
+
+
   
 
 
