@@ -68,10 +68,28 @@ Outputs
 
 ![ComfyUI_GroundingDino_Controlnet_2](https://github.com/user-attachments/assets/5215f5d1-12be-4b00-bd71-39ab1c92ab9c)
 
+#### Removing BG 
+use BRIAAI Matting
+
+![image](https://github.com/user-attachments/assets/e86b9b32-5fdb-473f-8cfb-9f49a2c8a0e6)
+
 
 #### IC-Lighting
 https://github.com/kijai/ComfyUI-IC-Light
 https://github.com/lllyasviel/IC-Light
+
+1. Create Gradient using spline ssplitter 
+![image](https://github.com/user-attachments/assets/fea8060e-d9be-4e63-a318-02201e59b58a)
+
+
+2. Create Light Source 
+![image](https://github.com/user-attachments/assets/06f8d188-a1cb-46d8-ab28-a98b413421da)
+
+3. Replace Background Image with Mask
+![image](https://github.com/user-attachments/assets/c79741ff-2cbc-44b1-99bf-bbc1e8ea32ba)
+
+
+
 
 
   
