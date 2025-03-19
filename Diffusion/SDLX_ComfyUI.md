@@ -89,6 +89,45 @@ https://github.com/lllyasviel/IC-Light
 ![image](https://github.com/user-attachments/assets/c79741ff-2cbc-44b1-99bf-bbc1e8ea32ba)
 
 
+# Face Swap 
+Node: Reactor Fast Face Swap 
+Input Image: Iron Man
+Source Image: any face to replace Iron Man
+Swap_model: inswapper_128.onnx
+facedetection: retinaface_resnet50
+face_restore_model: to upscale the image: GFPGANv1.4.pth
+
+![Face Swap](https://github.com/user-attachments/assets/6606ff84-6b5f-4921-bdbe-d981fb4a5dec)
+
+# Lip Sync
+
+for issue in Jarvis Lab. get the git URL and in the URL get the install Pip code 
+Goto JupyterLab --> ConfyUI
+in JupyterLab --> Terminal --> paste the PIP install and run 
+
+Node Name: Latentsync ie ComfyUI latent sync 
+![lipsync](https://github.com/user-attachments/assets/c60482c0-0d16-4965-b301-5582d7aca212)
+
+#### Audio
+Create audio using https://elevenlabs.io/
+
+# Animate Diff
+
+Node: 
+
+Batch size should be multiply of Frame rate in Video combine 
+if Batch size is 32 and the frame rate is 8, then you get 4 secs diff 
+if Batch size is 16 and the frame rate is 8, then you get 2 secs diff 
+
+![Animate Diff](https://github.com/user-attachments/assets/95499488-c057-4cae-b3f0-e3fb4dd29647)
+
+With IP Adapter
+
+![Animate Diif + IPA](https://github.com/user-attachments/assets/98ea4f00-65fa-40ed-8e69-2b81a8b78679)
+
+
+
+
 
 
 
