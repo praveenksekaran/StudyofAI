@@ -53,6 +53,12 @@ called variable, rare token, instance token
 
 # LoRA Training using KohyaSS
 
+#### Step 0: Resize the image
+- using Birme resize the image
+- 512x512 for sd1.5 models
+- 1024x1024 for XL models
+- any size image will work with xl models 
+
 #### Step 1 : Start a Kohya instance
 - Start a new instance on JarvisLabs
 - JarvisLabs --> Templates --> Kohya --> Run on Cloud
@@ -68,7 +74,7 @@ called variable, rare token, instance token
 
 #### Step 3 : Watch the Logs
 - Go to home. Open a "Terminal" from Launcher panel
-- Copy path of Khoya_logs.log from left navigation
+- Copy path of Khoya_logs.log from left navigation. (watch you terminal path and provide relative path of the log)
 ```bash
 #path copied from earlier step
 tail -f kohya_logs.log
@@ -76,7 +82,7 @@ tail -f kohya_logs.log
 
 #### Step 4 : Generate Caption txt using Blip
 - go to APIs
-- go to Utilities --> Blip --> images path --> Click Caption Images (watch the Terminal for updates)
+- go to Utilities --> Blip Captioning --> images path --> Click Caption Images (watch the Terminal for updates)
  
 ![image](https://github.com/user-attachments/assets/980124d7-67be-4d2e-897b-8a067d638d1f)
 
@@ -87,10 +93,11 @@ tail -f kohya_logs.log
 
 ![image](https://github.com/user-attachments/assets/48a97c63-e5c3-4460-9284-a36718fdeb44)
 
+- Add all fields values as shown below
 - Add tags to every image
 ![image](https://github.com/user-attachments/assets/0fa5ed4c-782d-4c47-83fd-e0b1aee430bb)
 
-#### Step 6 : Creating folder structure
+#### Step 6 : Dataset Preparation
 - Create a model training folder structure
 - go to Lora tab and Dataset Preparation
 ![image](https://github.com/user-attachments/assets/1fab3cd5-f52c-446a-8862-73974f12ac4e)
@@ -105,6 +112,7 @@ tail -f kohya_logs.log
   
 ![image](https://github.com/user-attachments/assets/decc1f06-6636-4a9c-bd41-1832eaa32e8a)
 
+- Add all fields values as shown below
 ![image](https://github.com/user-attachments/assets/e003597d-9e12-4349-aee6-53d85d38eadb)
 
 - Click "Copy info to respective fields"
