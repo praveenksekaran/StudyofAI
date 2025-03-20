@@ -61,19 +61,18 @@ called variable, rare token, instance token
 #### Step 2 : Upload images 
 - open JupyterLab on instances.
 - go to home/
-
-![image](https://github.com/user-attachments/assets/ea38dbdf-b006-48f2-a721-4006a717a06e)
-
 - Create a new folder called "dataset"
 - Upload all the sample images
+
+![image](https://github.com/user-attachments/assets/ea38dbdf-b006-48f2-a721-4006a717a06e)
 
 #### Step 3 : Watch the Logs
 - Go to home. Open a "Terminal" from Launcher panel
 - Copy path of Khoya_logs.log from left navigation
-'''bash
+```bash
 #path copied from earlier step
 tail -f kohya_logs.log
-'''
+```
 
 #### Step 4 : Generate Caption txt using Blip
 - go to APIs
@@ -97,9 +96,9 @@ tail -f kohya_logs.log
 ![image](https://github.com/user-attachments/assets/1fab3cd5-f52c-446a-8862-73974f12ac4e)
 
 - Steps/Cycle is called epoch 
-- to understand "repeats", understand this : to train a SD1.5 loRA model you will train for 2000-3000 step.
-- "repeat" means: How many times to repeat the dataset in 1 training cycle. (note there are 30 sample images in my dataset)
-- "Batch Size": is a demominator on the sample images.
+- For good results in SD1.5 loRA model you will train for 2000-3000 step.
+- "repeat" means: How many times to repeat the dataset in 1 training cycle. 
+- "Batch Size": is a demominator in the epoch formulae
 - (sample images/batch size) * Repeats = steps/cycle or Epoch
 - Chose your "repeats" based on the "batch size" which you will choose in "paraments" tab.
 - batch size of 2 is ideal, but 1 works as well
@@ -122,7 +121,8 @@ tail -f kohya_logs.log
 
 #### Step 9 : Configure Parameters Tab
 - go to "parameters"
-- Keep LoRA type as standard. as it works the best 
+- Keep LoRA type as standard. as it works the best
+- Note: there are 30 sample images in my dataset
 - Earlier we had given "Repeats" as 10. which is like 300 steps/cycle (ie 30 images * 10 repeats = 300 steps/cycle). To get between 2000-3000 steps, we need 10 such cycles. Therefore Epoch or Steps/Cycle is 10.
 
 ![image](https://github.com/user-attachments/assets/d5ce193d-2881-4b8b-b387-94c8fc248249)
@@ -156,14 +156,14 @@ tail -f kohya_logs.log
 
 
 #### Step 13 : Using LoRA
-- Go to ComfyUI --> JuptyerLabs
+- Go to ComfyUI Instance --> JuptyerLabs
 - upload the model to home/ComfyUI/Models/loras
 - Note: watch for the progress bar at the bottom of the screen. if used the model before completing you will get "Incomplete buffer" error
 
    
 ![image](https://github.com/user-attachments/assets/c7262e3b-566f-4111-995a-e7202e96b8f8)
 
-- Go to ComfyUI --> APIs
+- Go to ComfyUI instance --> APIs
 - Create a workflow and add a node called "Load LoRA" and for "lora_name" choose our new lora
 
 ![image](https://github.com/user-attachments/assets/5726daeb-e047-4269-b6ad-d7cbfeb997e7)
