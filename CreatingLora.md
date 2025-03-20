@@ -42,11 +42,11 @@ called variable, rare token, instance token
 
 # Preparation 
 3 Things important for FineTuning 
-- Image/ Dataset/Training data
+1. Image/ Dataset/Training data
      - 10 to 20 images of a person or object (for SD1.5 images should be 512x512, for XL models it can be 1024)
      - Use [Birme](https://www.birme.net/) for resizing Images depending on the model
-- Model
-- Caption/Labels
+2. Model
+3. Caption/Labels
      - Blip captioner (is a vision model)
      - Wd tagger ( gives only tags. good for Anime)
      - interrogate Clip
@@ -102,6 +102,11 @@ tail -f kohya_logs.log
 - go to Lora tab and Dataset Preparation
 ![image](https://github.com/user-attachments/assets/1fab3cd5-f52c-446a-8862-73974f12ac4e)
 
+- Add all fields values as shown below. Including Destination training directory
+![image](https://github.com/user-attachments/assets/e003597d-9e12-4349-aee6-53d85d38eadb)
+
+- Click "Copy info to respective fields"
+
 - Steps/Cycle is called epoch 
 - For good results in SD1.5 loRA model you will train for 2000-3000 step.
 - "repeat" means: How many times to repeat the dataset in 1 training cycle. 
@@ -112,10 +117,7 @@ tail -f kohya_logs.log
   
 ![image](https://github.com/user-attachments/assets/decc1f06-6636-4a9c-bd41-1832eaa32e8a)
 
-- Add all fields values as shown below
-![image](https://github.com/user-attachments/assets/e003597d-9e12-4349-aee6-53d85d38eadb)
 
-- Click "Copy info to respective fields"
 
 #### Step 7 : Choose a Model
 - Go to models- select a model
