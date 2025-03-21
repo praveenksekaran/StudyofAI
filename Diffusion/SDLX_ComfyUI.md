@@ -101,15 +101,18 @@ face_restore_model: to upscale the image: GFPGANv1.4.pth
 
 # Lip Sync
 
-for issue in Jarvis Lab. get the git URL and in the URL get the install Pip code 
-Goto JupyterLab --> ConfyUI
-in JupyterLab --> Terminal --> paste the PIP install and run 
-
 Node Name: Latentsync ie ComfyUI latent sync 
+![LatentsyncWrapper](https://github.com/user-attachments/assets/99d814a7-acd2-49f8-b109-75db003fd782)
+
+Workflow:
 ![lipsync](https://github.com/user-attachments/assets/c60482c0-0d16-4965-b301-5582d7aca212)
 
 #### Audio
 Create audio using https://elevenlabs.io/
+
+for issue in Jarvis Lab. get the git URL and in the URL get the install Pip code 
+Goto JupyterLab --> ConfyUI
+in JupyterLab --> Terminal --> paste the PIP install and run 
 
 # Animate Diff
 
