@@ -1,2 +1,192 @@
 # How Transformers work ?
 https://www.youtube.com/watch?v=wjZofJX0v4M
+
+Understanding Transformers: A Structured Overview
+1. Introduction to GPT and Transformers
+1.1 What GPT Stands For
+
+Generative: Models that create new text.
+
+Pretrained: Learned from massive datasets before fine-tuning.
+
+Transformer: A neural network architecture powering modern AI.
+
+1.2 Applications of Transformer Models
+
+Text → Audio (speech synthesis)
+
+Audio → Text (transcription)
+
+Text → Image (e.g., DALL·E, Midjourney)
+
+Language translation
+
+Predicting next tokens (foundation of ChatGPT)
+
+2. How Transformers Generate Text
+2.1 Next-Token Prediction
+
+Model predicts probability distribution over possible next tokens.
+
+Generation loop:
+
+Provide initial text.
+
+Model predicts the next token.
+
+Sample from the distribution.
+
+Append token and repeat.
+
+2.2 Why Scaling Matters
+
+Small models (e.g., GPT-2) produce incoherent text.
+
+Larger models (e.g., GPT-3) produce meaningful, contextually aware text.
+
+3. High-Level Architecture of a Transformer
+3.1 Tokenization
+
+Input text is broken into tokens (words, subwords, punctuation).
+
+Non-text inputs (images/sound): broken into patches or chunks.
+
+3.2 Embedding Tokens as Vectors
+
+Each token maps to a high-dimensional vector (e.g., 12,288 dimensions in GPT-3).
+
+Vectors encode semantic meaning.
+
+Similar words → nearby vectors.
+
+3.3 Attention Block (Core Mechanism)
+
+Vectors "communicate" with each other.
+
+Determines contextual relevance between tokens.
+
+Updates token meanings based on surrounding context.
+
+3.4 Feed-Forward / MLP Block
+
+Acts independently on each vector.
+
+Interpreted as asking a series of learned questions about the vector, then updating it.
+
+3.5 Repeat Layers
+
+Transformers alternate attention and MLP blocks repeatedly.
+
+Final vector represents contextual meaning of last token.
+
+3.6 Final Prediction (Unembedding + Softmax)
+
+Final vector → logits for each token.
+
+Softmax converts logits to a probability distribution.
+
+4. Key Background Concepts in Deep Learning
+4.1 Machine Learning Overview
+
+Instead of hand-written rules, models learn patterns from data.
+
+Uses tunable parameters/weights.
+
+4.2 Structure of Deep Learning Models
+
+Inputs and intermediate layers represented as tensors (arrays of numbers).
+
+Model operations = mostly matrix–vector multiplications.
+
+Nonlinear functions added between layers.
+
+4.3 Backpropagation
+
+Core algorithm to adjust weights during training.
+
+Requires specific architectural consistency (e.g., layers as numeric arrays).
+
+5. Word Embeddings Explained
+5.1 Embedding Matrix (WE)
+
+Size (GPT-3 example):
+
+Vocabulary: 50,257 tokens
+
+Embedding dimension: 12,288
+
+Total parameters: ~617M
+
+5.2 Semantic Meaning in Embedding Space
+
+Examples of meaningful vector relationships:
+
+king – man + woman ≈ queen
+
+Italy – Germany + Hitler ≈ Mussolini
+
+sushi + (Germany – Japan) ≈ bratwurst
+
+5.3 Dot Product as Similarity
+
+Positive → aligned
+
+Zero → unrelated
+
+Negative → opposite direction
+
+Example:
+
+Plurality vector: cats – cat
+Plural nouns align more strongly with this direction.
+
+6. Context Window
+
+Transformers process a fixed number of tokens at a time.
+
+GPT-3 context size: 2048 tokens.
+
+Longer conversations may cause earlier context to be forgotten.
+
+7. Final Layer: Unembedding and Softmax
+7.1 Unembedding Matrix (WU)
+
+Maps final embedding → logits for each token.
+
+Similar parameter count to embedding matrix: ~617M.
+
+7.2 Softmax Function
+
+Converts logits → probability distribution.
+
+Larger logits → higher probability.
+
+7.3 Temperature Parameter (T)
+
+Controls creativity:
+
+T = 0 → deterministic, safe, predictable
+
+High T → diverse but risk of nonsense
+
+8. Training Considerations
+
+Each token’s vector in final layer is used to predict its next token.
+
+Enables training on multiple positions simultaneously.
+
+9. Summary & What Comes Next
+
+Foundations covered:
+
+Embeddings
+
+Dot products
+
+Softmax
+
+Context
+
+Matrix-based architecture
+
+These build intuition for the attention mechanism, the core innovation of transformers.
