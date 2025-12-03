@@ -1,9 +1,9 @@
 # How Transformers work ?
 https://www.youtube.com/watch?v=wjZofJX0v4M
 
-Understanding Transformers: A Structured Overview
-1. Introduction to GPT and Transformers
-1.1 What GPT Stands For
+# Understanding Transformers: A Structured Overview
+## 1. Introduction to GPT and Transformers
+### 1.1 What GPT Stands For
 
 Generative: Models that create new text.
 
