@@ -1,17 +1,5 @@
 Lecture 19 : Architecting GenAI Solutions
-
-This summary is meant to help mentees review or catch up on the session. It captures the
-key ideas and practical insights shared during the lecture.
-
-**What Was Covered**
-This session, led by guest mentor Tejas, provided a practical, high-level overview of the
-entire lifecycle of building and deploying a Generative AI application. Using an AI image
-generation tool (like Playground AI) as a running example, we walked through the critical
-stages: from selecting the right technology stack and forecasting costs to validating the idea,
-designing the architecture, and considering pre-production checks. The lecture emphasized
-the importance of a pragmatic approach, focusing on what it takes to move a GenAI idea
-from a simple experiment to a production-ready product, highlighting the unique challenges
-and considerations in the AI space.
+by **guest mentor Tejas**
 
 # Key Concepts & Ideas
 The GenAI Product Lifecycle: key stages
