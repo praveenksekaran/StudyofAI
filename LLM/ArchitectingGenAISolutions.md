@@ -1,7 +1,9 @@
 Lecture 19 : Architecting GenAI Solutions
+
 This summary is meant to help mentees review or catch up on the session. It captures the
 key ideas and practical insights shared during the lecture.
-What Was Covered
+
+**What Was Covered**
 This session, led by guest mentor Tejas, provided a practical, high-level overview of the
 entire lifecycle of building and deploying a Generative AI application. Using an AI image
 generation tool (like Playground AI) as a running example, we walked through the critical
@@ -10,44 +12,49 @@ designing the architecture, and considering pre-production checks. The lecture e
 the importance of a pragmatic approach, focusing on what it takes to move a GenAI idea
 from a simple experiment to a production-ready product, highlighting the unique challenges
 and considerations in the AI space.
-Key Concepts & Ideas
-● The GenAI Product Lifecycle: The session framed the building process in several
-key stages:
-○ Technology & Tool Selection: Choosing the right stack based on the
+
+# Key Concepts & Ideas
+The GenAI Product Lifecycle: key stages
+● Technology & Tool Selection: Choosing the right stack based on the
 problem and team comfort.
-○ Cost & Scalability Forecasting: Estimating potential costs (especially for
+● Cost & Scalability Forecasting: Estimating potential costs (especially for
 GPUs and APIs) and planning for user traffic.
-○ Pre-Development Validation: Testing core AI capabilities and edge cases
+● Pre-Development Validation: Testing core AI capabilities and edge cases
 before building the full application.
-○ Product Design & User Flow: Mapping out the user journey and application
+● Product Design & User Flow: Mapping out the user journey and application
 features.
-○ Architecture & Data Modeling: Designing the technical backend and
+● Architecture & Data Modeling: Designing the technical backend and
 database structure.
-○ Pre-Production Checks: Ensuring reliability, security, and performance
+● Pre-Production Checks: Ensuring reliability, security, and performance
 before launch.
-● Cost Management in AI: GPU costs are a major factor. The lecture highlighted the
+
+## Cost Management in AI:
+GPU costs are a major factor. The lecture highlighted the
 difference between usage-based pricing (paying per API call, e.g., for a base model)
 and time-based pricing (paying for how long a GPU is running, e.g., for a
 custom-deployed model). It's crucial to set budgets and monitor usage to avoid
 unexpected bills.
-● The Importance of Pre-Development Validation: Because GenAI models can be
+## The Importance of Pre-Development Validation: 
+Because GenAI models can be
 non-deterministic, it's vital to test the core AI functionality extensively before investing
 heavily in building the surrounding application. This involves benchmarking different
 models, assessing quality and consistency, and identifying potential failure modes
 (edge cases).
-● System Architecture for AI Apps: A typical architecture might include:
+## System Architecture for AI Apps:
+A typical architecture might include:
 ○ Frontend (Client-side): The user interface where the user interacts.
 ○ Backend: Handles business logic and API requests.
-○ Message Queue: A system to manage and queue requests (e.g., image
-generation jobs) to avoid overloading the GPU resources.
+○ Message Queue: A system to manage and queue requests (e.g., image generation jobs) to avoid overloading the GPU resources.
 ○ GPU Workers: The computational units that run the AI models.
 ○ Database & Storage: For persisting user data, generated content, and other
 application state.
-● Handling 3rd Party API Limitations: When building with multiple AI services (e.g.,
+## Handling 3rd Party API Limitations: 
+When building with multiple AI services (e.g.,
 OpenAI, 11Labs, Replicate), it's essential to be aware of their specific limitations,
 such as rate limits (requests per second) and concurrency limits (simultaneous
 requests). The application architecture must be designed to handle these gracefully.
-Tools & Frameworks Introduced
+
+## Tools & Frameworks
 ● Playground AI: Used as the primary example of a user-facing AI image generation
 application to frame the discussion.
 ● Replicate: A platform for deploying and running AI models. Highlighted for its ease of
