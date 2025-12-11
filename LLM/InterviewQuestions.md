@@ -25,6 +25,20 @@ To handle LLM hallucinations and incorrect or broken outputs, I follow a **three
 * Implement **fallback responses** like “Not found in the provided data.”
 
  **4. Continuous Improvement**
+ * Log incorrect outputs, user feedback, and error patterns.
+ * Refresh the knowledge base regularly to avoid stale information.
+
+### 2. Concise Answer – Output Guardrails
+
+To enforce output guardrails, I use a layered approach:
+
+1. **Schema Enforcement:** Validate outputs against a fixed JSON or text structure so the agent cannot produce uncontrolled formats.
+2. **Rule-Based Filters:** Use regex, allow/deny lists, and content filters to block unsafe, sensitive, or out-of-scope responses.
+3. **Verification Pass:** A second LLM pass checks for policy violations, hallucinations, broken links, or unsupported claims before sending the output.
+4. **Fallback Logic:** If validation fails, regenerate the response with stricter instructions or return a safe fallback message.
+
+**In short:** *Constrain the format, filter the content, verify the answer, and fall back safely when needed.*
+
 
 # Agents Questions
 ### 1. How to handle Agent hallucinations, broken links, and incorrect data 
